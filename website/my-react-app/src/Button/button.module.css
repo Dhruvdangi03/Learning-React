@@ -1,0 +1,9 @@
+.button{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: hsl(260, 90%, 50%);
+    color: white;
+    padding: 10px 10px;
+    border-radius: 10px; 
+    border: none;
+    cursor: pointer;
+} 
