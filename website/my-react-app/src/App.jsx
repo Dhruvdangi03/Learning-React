@@ -6,6 +6,8 @@ import Button from "./Button/Button";
 import Student from "./Student";
 import UserGreeting from "./UserGreeting";
 import List from "./List";
+import ClickButton from "./ClickButton";
+import ProfilePicture from "./ProfilePicture";
 
 function App() {
   const fruits = [{id: 1, name: "apple", calories: 95}, 
@@ -50,6 +52,9 @@ function App() {
         {nothing.length > 0 && <List items={nothing} category = "Nothing"/>}
 
         <Card/>
+        <ProfilePicture/>
+
+        <ClickButton/>
         
         <Footer/>
       </>
