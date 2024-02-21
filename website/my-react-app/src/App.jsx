@@ -8,6 +8,8 @@ import UserGreeting from "./UserGreeting";
 import List from "./List";
 import ClickButton from "./ClickButton";
 import ProfilePicture from "./ProfilePicture";
+import MyComponent from "./MyComponent";
+import Counter from "./Counter";
 
 function App() {
   const fruits = [{id: 1, name: "apple", calories: 95}, 
@@ -44,17 +46,22 @@ function App() {
         {vegetables.length > 0 ? <List items={vegetables} category = "Vegetables"/> : null}
         {nothing.length > 0 ? <List items={nothing} category = "Nothing"/> : null}
 
-        */}
+        <ProfilePicture/>
 
-        {/* Here's a shortcut to the trinary operator use && instead of ? in javascript */}
+        // Here's a shortcut to the trinary operator use && instead of ? in javascript 
         {fruits.length > 0 && <List items={fruits} category = "Fruits"/>}
         {vegetables.length > 0 && <List items={vegetables} category = "Vegetables"/>}
         {nothing.length > 0 && <List items={nothing} category = "Nothing"/>}
 
-        <Card/>
-        <ProfilePicture/>
-
         <ClickButton/>
+
+        <Counter/>
+
+        */}
+
+        <Card/>
+
+        <MyComponent/>
         
         <Footer/>
       </>
