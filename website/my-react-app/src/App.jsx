@@ -57,11 +57,11 @@ function App() {
 
         <Counter/>
 
+        <MyComponent/>
+
         */}
 
-        <Card/>
-
-        <MyComponent/>
+        <Card/>   
         
         <Footer/>
       </>

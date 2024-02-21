@@ -1,17 +1,27 @@
-// import randomImage from './assets/HerFace.jpg';
 import React, {useState} from "react";
 
 function Card(){
-    const girls = ['./src/assets/HerFace.jpg', './src/assets/anotherFace.jpg'];
-    let [imgUrl, setUrl] = useState(girls[0]);
+    const girls = ['./src/assets/One.jpg', './src/assets/Two.jpg','./src/assets/Three.jpg', './src/assets/Four.jpg', './src/assets/Five.jpg', './src/assets/Six.jpg', './src/assets/Seven.jpg'];
+
+    const generateNumber = (min, max) => {
+        if (min === max) {
+          return min;
+        }
+    
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    };
+
+    let index = generateNumber(0, 6);
+
+    let [imgUrl, setUrl] = useState(girls[index]);
 
     const handleClick = (e) => {
-        if(imgUrl === girls[0]){
-            setUrl(girls[1]);
-        }else{
-            setUrl(girls[0]);
-        }
-        
+        // if(imgUrl === girls[0]){
+        //     setUrl(girls[1]);
+        // }else{
+        //     setUrl(girls[0]);
+        // }
+        setUrl(girls[generateNumber(0, 6)]);
         // e.target.setAttribute('src', imgUrl);
         // console.log(e);
     }   
