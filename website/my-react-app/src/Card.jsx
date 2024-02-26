@@ -21,9 +21,11 @@ function Card(){
         // }else{
         //     setUrl(girls[0]);
         // }
-        setUrl(girls[generateNumber(0, 6)]);
+        
         // e.target.setAttribute('src', imgUrl);
         // console.log(e);
+
+        setUrl(girls[generateNumber(0, 6)]);
     }   
 
     return(

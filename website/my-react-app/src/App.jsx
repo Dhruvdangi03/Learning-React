@@ -10,6 +10,10 @@ import ClickButton from "./ClickButton";
 import ProfilePicture from "./ProfilePicture";
 import MyComponent from "./MyComponent";
 import Counter from "./Counter";
+import ColorPicker from "./ColorPicker";
+import ToDoList from "./ToDoList";
+import DigitalClock from "./DigitalClock";
+import ComponentA from "./ComponentA";
 
 function App() {
   const fruits = [{id: 1, name: "apple", calories: 95}, 
@@ -27,8 +31,9 @@ function App() {
   const nothing = [];
   
   return(<>
-        <Header/>
         {/* 
+        <Header/>
+
         <UserGreeting isLoggedIn={true} username="Current User"/>
         <UserGreeting />
 
@@ -57,13 +62,24 @@ function App() {
 
         <Counter/>
 
+       
+
+        <Card/>   
+
+        <ColorPicker/>
+
         <MyComponent/>
+
+        <DigitalClock/>
+
+        <ToDoList/>
+        
+        <Footer/>
 
         */}
 
-        <Card/>   
+      <ComponentA/>
         
-        <Footer/>
       </>
   );
 }

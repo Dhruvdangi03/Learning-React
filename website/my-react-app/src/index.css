@@ -1,3 +1,18 @@
+body{
+  background-color: hsl(0, 0%, 50%);
+  /* background-image: url(assets/background-girl.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+
+  /* Optional */
+  /* display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  align-items: center; */
+}
+
 .card{
   border: 1px solid hsl(0, 0%, 80%);
   border-radius: 10px;
@@ -118,4 +133,132 @@
 
 .counter-button:hover{
   background-color: hsl(0, 100%, 60%);
+}
+
+.color-picker-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.color-display{
+  width: 400px;
+  height: 400px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-display p{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  border: 3px solid white;
+}
+
+label{
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 25px;
+}
+
+.remove-food li:hover{
+  cursor: pointer;
+}
+
+.to-do-list{
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin-top: 100px;
+}
+
+h1{
+  font-size: 4rem;
+  color: white;
+}
+
+.to-do-list button{
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.to-do-button{
+  background-color: hsl(125, 47%, 64%);
+}
+
+.to-do-button:hover{
+  background-color: hsl(125, 47%, 44%);
+}
+
+.delete-button{
+  background-color: hsl(10, 90%, 64%);
+}
+
+.delete-button:hover{
+  background-color: hsl(10, 90%, 44%);
+}
+
+.move-button{
+  background-color: hsl(207, 90%, 64%);
+}
+
+.move-button:hover{
+  background-color: hsl(207, 90%, 44%);
+}
+
+.to-do-list input[type="text"]{
+  font-size: 1.5rem;
+  padding: 10px;
+  border: 2px solid hsla(0, 0%, 80%);
+  border-radius: 10px;
+  color: rgb(100, 100, 100);
+}
+
+.to-do-list ol{
+  padding: 0;
+}
+
+.to-do-list li{
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10px;
+  background-color: rgb(190, 190, 190);
+  border: 3px solid hsl(0, 0%, 85%, 0.75);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.text{
+  flex: 1;
+}
+
+.delete-button, .move-button{
+  padding: 8px 12px;
+  font-size: 1.4rem;
+  margin-left: 10px;
+}
+
+.clock-container{
+  backdrop-filter: blur(5px);
+}
+
+.clock{
+  color: white;
+  font-size: 6rem;
+  font-weight: bold;
+  font-family: 'Calligraphy', Serif;
+  text-align: center;
+  text-shadow: 3px 3px 5px hsl(0, 0%, 20%);
+}
+
+.box{
+  border: 3px solid;
+  padding: 25px;
 }
