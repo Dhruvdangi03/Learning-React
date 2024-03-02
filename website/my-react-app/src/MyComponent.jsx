@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect, useRef} from "react";
 
 function MyComponent(){
     // let [name, setName] = useState("Guest");
@@ -226,38 +226,93 @@ function MyComponent(){
     //     </>
     // );
 
-    let [width, setWidth] = useState(window.innerWidth);
-    let [height, setHeight] = useState(window.innerHeight);
+    // let [width, setWidth] = useState(window.innerWidth);
+    // let [height, setHeight] = useState(window.innerHeight);
 
     // Without useEffect this will run everytime the component re-renders
     // window.addEventListener("resize", handleResize);
     // console.log("Event Listener Added");
 
+    // useEffect(() => {
+    //     window.addEventListener("resize", handleResize);
+    //     console.log("Event Listener Added");
+
+    //     return() => {
+    //         window.removeEventListener("resize", handleResize);
+    //         console.log("Event Listener Removed");
+    //     };
+    // }, []);
+
+    // useEffect(() => {
+    //     document.title = `Size ${width} x ${height}`;
+    // }, [width, height]);
+
+
+    // function handleResize(){
+    //     setWidth(window.innerWidth);
+    //     setHeight(window.innerHeight);
+    // }
+
+    // return(
+    //     <>
+    //         <p>Window Width: {width}</p>
+    //         <p>Window Height: {height}</p>
+    //     </>
+    // );
+
+    // let [number, setNumber] = useState(0);
+
+    // const ref = useRef(0);
+
+    const inputRef1 = useRef(null);
+    const inputRef2= useRef(null);
+    const inputRef3 = useRef(null);
+
     useEffect(() => {
-        window.addEventListener("resize", handleResize);
-        console.log("Event Listener Added");
+        console.log("COMPONENT RENDERED")
+    });
 
-        return() => {
-            window.removeEventListener("resize", handleResize);
-            console.log("Event Listener Removed");
-        };
-    }, []);
+    function handleClick1(){
+        // setNumber(n => n + 1);
+        // ref.current++;
+        // console.log(ref.current);
+        inputRef1.current.focus();
+        inputRef1.current.style.backgroundColor = "Gray";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "";
+    }
 
-    useEffect(() => {
-        document.title = `Size ${width} x ${height}`;
-    }, [width, height]);
+    function handleClick2(){
+        inputRef2.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "Yellow";
+        inputRef3.current.style.backgroundColor = "";
+    }
 
-
-    function handleResize(){
-        setWidth(window.innerWidth);
-        setHeight(window.innerHeight);
+    function handleClick3(){
+        inputRef3.current.focus();
+        inputRef1.current.style.backgroundColor = "";
+        inputRef2.current.style.backgroundColor = "";
+        inputRef3.current.style.backgroundColor = "Blue";
     }
 
     return(
-        <>
-            <p>Window Width: {width}</p>
-            <p>Window Height: {height}</p>
-        </>
+        <div>
+            <button onClick={handleClick1}>
+                Click Me 1!
+            </button>
+            <input ref={inputRef1}/>
+
+            <button onClick={handleClick2}>
+                Click Me 2!
+            </button>
+            <input ref={inputRef2}/>
+
+            <button onClick={handleClick3}>
+                Click Me 3!
+            </button>
+            <input ref={inputRef3}/>
+        </div>
     );
 }
 

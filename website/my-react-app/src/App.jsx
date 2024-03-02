@@ -14,6 +14,7 @@ import ColorPicker from "./ColorPicker";
 import ToDoList from "./ToDoList";
 import DigitalClock from "./DigitalClock";
 import ComponentA from "./ComponentA";
+import StopWatch from "./StopWatch";
 
 function App() {
   const fruits = [{id: 1, name: "apple", calories: 95}, 
@@ -73,12 +74,14 @@ function App() {
         <DigitalClock/>
 
         <ToDoList/>
+
+        <ComponentA/>
         
         <Footer/>
 
         */}
 
-      <ComponentA/>
+        <StopWatch/>
         
       </>
   );
